@@ -22,6 +22,8 @@
     </div>
   </header>
   <h1>{{ currency }}</h1>
+  <div v-if="currency === 'USD'">{{ usdData }}</div>
+  <div v-else-if="currency === 'EURO'">{{ euroData }}</div>
 </template>
 
 <script>
@@ -37,10 +39,17 @@ export default {
     toggleCurrency() {
       this.currency = this.currency === 'USD' ? 'EURO' : 'USD';
     }
+  },
+  computed: {
+    usdData() {
+      return this.usd.join(', ');
+    },
+    euroData() {
+      return this.euro.join(', ');
+    }
   }
 };
 </script>
-
 
 <style scoped>
 header {
