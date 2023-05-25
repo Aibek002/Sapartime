@@ -4,11 +4,16 @@
     <div class="item"><a href="">Location</a></div>
     <div class="item"><a href="">Schedule</a></div>
     <div class="item"><a href="">Calendar</a></div>
+    <div class="item"><button class="btn btn-primary">+</button></div>
     
   </div>
 </template>
-  
+
 <script>
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+
 export default {
 
 }
@@ -18,7 +23,7 @@ export default {
 .content {
   display: grid;
   grid-template-columns: '40% 30% 30%';
-  grid-template-areas: 'item item item';
+  grid-template-areas: 'item item item .  ';
   height: 70px;
   border-bottom: 1px solid var(--light-grey-color, #EAEEF3);
   padding-top: 20px;
